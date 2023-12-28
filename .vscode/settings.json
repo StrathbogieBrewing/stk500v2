@@ -1,0 +1,29 @@
+{
+    "files.associations": {
+        "led.h": "c",
+        "watchdog.h": "c",
+        "uart.h": "c",
+        "stk_delay.h": "c",
+        "stk_uart.h": "c",
+        "type_traits": "c",
+        "stdbool.h": "c",
+        "time.h": "c",
+        "stdint.h": "c"
+    },
+
+    "cmake.statusbar.advanced": {
+        "debug": {
+            "visibility": "hidden"
+        },
+        "launch": {
+            "visibility": "hidden"
+        }
+    },
+    
+    "cmake.buildBeforeRun": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.configureOnOpen": false,
+
+    "cortex-debug.gdbPath": "gdb-multiarch",
+    "cortex-debug.openocdPath": "/openocd/src/openocd",
+}

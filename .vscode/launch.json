@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug with RP2040 using OpenOCD",
+            "type": "cortex-debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "${command:cmake.launchTargetPath}",
+            "request": "launch",
+            "servertype": "openocd",
+            "device": "RP2040",
+            "configFiles": [
+                "/openocd/tcl/interface/cmsis-dap.cfg",
+                "/openocd/tcl/target/rp2040.cfg"
+            ],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "parsed",
+            "searchDir": [
+                "/openocd/tcl"
+            ],
+            "serverArgs": [
+                "-c adapter speed 1000",
+            ],
+        }
+    ]
+}

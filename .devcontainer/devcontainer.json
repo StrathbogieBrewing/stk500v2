@@ -1,0 +1,22 @@
+{
+	"name": "Raspberry Pi Pico Development Environment",
+	"image": "ghcr.io/strathbogiebrewing/stk500v2/pico-build:v1.1.1",
+
+	"extensions": [
+		"marus25.cortex-debug",
+		"ms-vscode.cpptools",
+		"ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cmake-tools"
+	],
+	"runArgs": [
+		"--privileged"
+	],
+	"remoteEnv": {
+		"SHELL": "/bin/bash"
+	},
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workdir,type=bind,consistency=delegated",
+	"workspaceFolder": "/workdir",
+	"mounts": [
+		"source=/dev/bus/usb,target=/dev/bus/usb,type=bind"
+	]
+}
